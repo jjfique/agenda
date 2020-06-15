@@ -2,24 +2,24 @@
 require('conector.php');
 $con = new ConectorBD('localhost','root','123456789');
 
-if ($con->initConexion('agenda')=='OK') {
+if ($con->initConexion('agenda_db')=='OK') {
 
-    $datos['NOMBRE'] = "andres";
-    $datos['CORREO'] = "andres@gmail.com";
-    $datos['CONTRASENA'] = password_hash("juan",PASSWORD_DEFAULT);
-    $datos['FECHA_NACIMEINTO'] = "92/08/02";
+    $datos['nombre'] = "jonathan";
+    $datos['email'] = "jonathan@gmail.com";
+    $datos['password'] = password_hash("123",PASSWORD_DEFAULT);
+    $datos['fecha_nacimiento'] = "92/08/02";
     $con->insertData('usuarios', $datos);
 
-    $datos['NOMBRE'] = "pedro";
-    $datos['CORREO'] = "pedro@gmail.com";
-    $datos['CONTRASENA'] = password_hash("juan",PASSWORD_DEFAULT);
-    $datos['FECHA_NACIMEINTO'] = "87/08/02";
+    $datos['nombre'] = "pedro";
+    $datos['email'] = "pedro@gmail.com";
+    $datos['password'] = password_hash("123",PASSWORD_DEFAULT);
+    $datos['fecha_nacimiento'] = "87/08/02";
     $con->insertData('usuarios', $datos);
 
-    $datos['NOMBRE'] = "camilo";
-    $datos['CORREO'] = "camilo@gmail.com";
-    $datos['CONTRASENA'] = password_hash("juan",PASSWORD_DEFAULT);
-    $datos['FECHA_NACIMEINTO'] = "67/08/02";
+    $datos['nombre'] = "camilo";
+    $datos['email'] = "camilo@gmail.com";
+    $datos['password'] = password_hash("123",PASSWORD_DEFAULT);
+    $datos['fecha_nacimiento'] = "67/08/02";
 
     if ($con->insertData('usuarios', $datos)) {
       echo "Se insertaron los datos correctamente";

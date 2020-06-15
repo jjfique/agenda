@@ -141,13 +141,15 @@
     $sql .= ' VALUES (';
     $i = 1;
     foreach ($data as $key => $value) {
-      $sql .= $value;
+      $sql .= "'$value'";
       if ($i<count($data)) {
-        $sql .= ', ';
+        $sql .= ',';
       }else $sql .= ');';
       $i++;
     }
+    echo $sql;
     return $this->ejecutarQuery($sql);
+    
   }
 
   //Función para actualizar registro en la base de datos
