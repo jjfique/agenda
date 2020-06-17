@@ -2,9 +2,9 @@
 require('conector.php');
 $con = new ConectorBD('localhost','root','123456789');
 
-if ($con->initConexion('agenda_db')=='OK') {
+if ($con->initConexion('agenda')=='OK') {
 
-    $datos['nombre'] = "jonathan";
+    $datos['nombre'] = "'jonathan'";
     $datos['email'] = "jonathan@gmail.com";
     $datos['password'] = password_hash("123",PASSWORD_DEFAULT);
     $datos['fecha_nacimiento'] = "92/08/02";
